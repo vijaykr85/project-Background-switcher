@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Switcher</title>
+    <style>
+        body{
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 22px;
+        }
+        .btn{
+           width: 40px;
+           height: 40px;
+           display: inline-block;
+           border: 1px solid black;
+           border-radius: 50%;
+           cursor: pointer;
+           margin-top: 20px;
+           margin-right: 10px;
+           
+
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #violet{
+            background-color: blueviolet;
+        }
+        #black{
+            background-color: black;
+        }
+        #container{
+            text-align: right;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua"  onclick="changeBG('#00FFFF')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#8F00FF')"></span>
+        <span class="btn" id="black"  onclick="changeBG('#000000')"></span>
+    </div>
+
+    <h1 class="text">AboutUs</h1>
+    <img src="https://blog.playstation.com/tachyon/2022/07/dff5cb716e87a6ef24b81bfcc811766d58f4f467.png?resize=1088%2C612&crop_strategy=smart&zoom=1.5" alt="TheLast">
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit reprehenderit soluta corporis quam dignissimos atque, nam deleniti magnam amet quas alias nemo sapiente veniam reiciendis officiis, nobis vero labore obcaecati consequatur. Veniam perferendis quibusdam alias distinctio saepe deserunt soluta accusantium. Nulla expedita, natus illum corporis dolore deleniti, quam laudantium ab est, suscipit iusto. Animi quos distinctio, aliquam sapiente perspiciatis nostrum similique nulla amet laborum? Sed perferendis ad est vero, recusandae iste doloremque magnam. Magnam dicta ut necessitatibus debitis doloribus quaerat unde impedit architecto tempora saepe natus at expedita officia ipsam similique quia, deserunt qui nihil perferendis! Explicabo ullam magnam aspernatur nisi non optio velit ut dicta aperiam exercitationem ipsam pariatur natus incidunt rerum, officiis dolorem fugit nulla praesentium ratione. Soluta ipsa exercitationem cupiditate quos molestiae consequatur assumenda optio dolorum iusto totam! Reiciendis ullam est architecto cum suscipit nisi. Iure ipsum perspiciatis explicabo velit ut itaque nostrum sed nesciunt beatae. Dolorum, recusandae fugit nisi corrupti veniam culpa dignissimos vel deserunt voluptates sequi, laboriosam repellendus rerum nam sunt corporis tempore aspernatur rem illo voluptatibus consectetur eos quam. Explicabo, facere nemo. Modi inventore itaque et similique eius earum? Sint beatae est, vero, sit saepe repellendus magni repudiandae aliquid dignissimos quos reiciendis adipisci autem!
+    </p>
+
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+
+            let txt = document.getElementsByClassName("text");
+            if(color == '#000000'){
+                for(let elm of txt){
+                    elm.style.color = "white";
+                }
+            }else{
+                for(let elm of txt){
+                    elm.style.color = "black";
+                } 
+            }
+        }
+    </script>
+    
+</body>
+</html>
